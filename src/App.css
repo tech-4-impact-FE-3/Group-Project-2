@@ -95,3 +95,32 @@
 .category a:hover {
   color: #D7715C;
 }
+
+/* Category  CSS*/
+.category {
+  width: 15%;
+  margin-top: 4rem;
+  margin-left: 4rem;
+}
+
+.category ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+  background-color: #F9F5F4;
+}
+
+.category li {
+  margin: 1rem 0;
+  border-bottom: 1px solid #e4dcda;
+}
+
+.category a {
+  color: #072D4B;
+  text-decoration: none;
+}
+
+.category a:hover {
+  color: #D7715C;
+}
