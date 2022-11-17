@@ -95,3 +95,18 @@
 .category a:hover {
   color: #D7715C;
 }
+
+/* img login */
+
+.login-img{
+display: flex;
+align-items: center;
+margin: 70px 40px 50px 0px;
+width: 450px;
+}
+
+/* img index */
+
+.index-img{
+  width: 450px;
+}
