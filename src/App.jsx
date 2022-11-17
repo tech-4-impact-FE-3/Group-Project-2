@@ -11,7 +11,7 @@ function App() {
     <Navbar /> 
     <BarKategori />  
     {/* <Gambar /> */}
-    <Gambarindex /> 
+    {/* <Gambarindex />  */}
     </div>
   )
 }
