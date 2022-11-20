@@ -188,3 +188,57 @@ width: 450px;
 .index-img{
   width: 450px;
 }
+
+/* Dashboard CSS */
+.dashboard {
+    background-color: #fff1e6;
+    background-image: none;
+}
+
+.forum {
+    margin: 1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: #fff;
+    position: relative;
+    overflow: hidden;
+    background-color: #F9F5F4;
+}
+
+.container-forum {
+    margin-bottom: 4rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.container-forum h2 {
+    margin: 2rem 1rem 0 2rem;
+    font-size: 1.5rem;
+    color: #072D4B;
+}
+
+.forum img {
+    width: 100%;
+}
+
+.forum-info a {
+    text-decoration: none;
+}
+
+.forum-info h3 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    color: #072D4B;
+    letter-spacing: 0.5px;
+}
+
+.forum-info h3:hover {
+    color: #D7715C;
+}
+
+.overview {
+    margin-top: 1rem;
+}
