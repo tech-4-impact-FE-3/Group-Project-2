@@ -25,15 +25,15 @@ const Login = () => {
 
     return (
         <>
-        <div className="login-content d-flex justify-content-between align-items-center bg-image">
+        <div className="login-register-content d-flex justify-content-between align-items-center bg-image">
             <div className="page-img d-flex flex-column align-items-center">
                 <h1><strong>Login</strong></h1>
                 <Gambar />
                 <div className="return-btn align-self-start">
-                <ReturnButton />
+                    <ReturnButton />
                 </div>
             </div>
-            <div className="login-text d-flex flex-column align-items-center">
+            <div className="content-text d-flex flex-column align-items-center">
                 <h1>Login</h1>
                 <div className="form-login">
                     <form action="" onSubmit={handleSubmit} className="d-flex flex-column">
