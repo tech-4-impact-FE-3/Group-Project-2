@@ -14,6 +14,7 @@
 /* Index */
 
 .btn-darker {
+    margin: 1rem 0;
     color: #F9F5F4;
     background-color: #072D4B;
     border: none;
@@ -30,6 +31,7 @@
 /* Login & Register */
 
 .btn-lighter {
+    margin: 1rem 0;
     color: black;
     background-color: #E9CCB1;
     border: 2px solid #072D4B;
@@ -174,17 +176,102 @@
     border: 1px solid #072D4B;
 }
 
-/* img login */
 
-.login-img{
-display: flex;
-align-items: center;
-margin: 70px 40px 50px 0px;
-width: 450px;
+/* Index */
+
+.page-img img {
+    width: 100%;
 }
 
-/* img index */
+.index-text h1,
+.index-text p {
+    color: #072D4B;
+}
 
-.index-img{
-  width: 450px;
+.index-text h1 {
+    font-size: 3em;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.index-text p {
+    width: 50%;
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+.index-text span.pink {
+    color: #D7715C;
+}
+
+.bg-image {
+    height: 100vh;
+    background-image: url(./img/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 100vh;
+}
+
+
+/* Login */
+
+.login-text {
+    margin-right: 25%;
+}
+
+.form-login {
+    width: 100%;
+}
+
+.return-btn {
+    margin-left: 2rem;
+}
+
+@media only screen and (max-width:1440px) {
+    .index-content,
+    .login-content {
+        flex-direction: column;
+    }
+    .bg-image {
+        height: auto;
+    }
+    .page-img img {
+        width: 75%;
+    }
+    .page-img h1 {
+        margin-top: 3rem;
+    }
+    .index-text h1,
+    .login-text h1 {
+        margin: 2rem 0 0.5rem 0;
+        font-size: 2em;
+    }
+    .index-text p {
+        width: 75%;
+        margin: 0.5rem 0;
+        font-size: 0.75rem;
+    }
+    .login-text {
+        margin-right: 0;
+    }
+    .btn-darker {
+        margin: 1rem 0 2rem 0;
+        font-size: 0.75rem;
+        padding: 0.25rem 1.5rem;
+    }
+    .btn-lighter {
+        margin: 1rem 0 3rem 0;
+        font-size: 0.75rem;
+        padding: 0.25rem 1.5rem;
+    }
+    .return-btn .btn-darker {
+        margin-left: 0;
+        color: #072D4B;
+        background-color: transparent;
+    }
+    .return-btn .btn-darker:hover {
+        color: #F9F5F4;
+        background-color: transparent;
+    }
 }
