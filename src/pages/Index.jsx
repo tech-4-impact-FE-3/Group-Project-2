@@ -1,5 +1,5 @@
 import React from "react";
-import GambarIndex from "../components/GambarIndex";
+import GambarIndex from "../components/Gambarindex";
 import LoginButton1 from "../components/LoginButton1";
 
 const Index = () => {
