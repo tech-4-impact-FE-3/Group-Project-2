@@ -1,25 +1,16 @@
 import './App.css';
-import BarKategori from './components/BarKategori';
-import Gambar from './components/gambar';
-import Gambarindex from './components/gambarIndex';
-import Navbar from "./components/Navbar";
-import BuatForum from './components/BuatForum';
-import Dashboard from './pages/Dashboard';
+import { Routes, Route } from "react-router-dom";
+import Index from './pages/Index';
+import Login from './pages/Login';
 
 function App() {
 
   return (
     <div className="App">
-      
-      {/* <Navbar /> 
-       <div className="d-flex justify-content-between">
-        <BarKategori />  
-        <Gambar />
-        <Gambarindex /> 
-        <BuatForum />
-      </div> */}
-      
-      <Dashboard />
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/login/" element={<Login />} />
+      </Routes>
     </div>
   )
 }

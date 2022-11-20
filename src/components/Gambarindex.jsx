@@ -1,13 +1,13 @@
 import React from 'react';
 import index from "../img/index.png";
 
-const Gambarindex = () => {
+const GambarIndex = () => {
     return (
-        <div className = "index-img">
+        <div className="index-img">
         <img src= {index} alt="img" />
         </div>
     )
 
 }
 
-export default Gambarindex;
+export default GambarIndex;

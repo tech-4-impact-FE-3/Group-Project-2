@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ReturnButton = () => {
     return (
         <>
-            <button type="button" className="btn-darker btn btn-primary">Cancel</button>
+            <Link to={"/"}><button type="button" className="btn-darker btn btn-primary">Cancel</button></Link>
         </>
     )
 }
