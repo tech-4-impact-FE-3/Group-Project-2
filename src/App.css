@@ -230,6 +230,12 @@
 
 .form-login a {
     margin-top: 1rem;
+    text-decoration: none;
+    color: #072D4B;
+}
+
+.form-login a:hover {
+    color: #F9F5F4;
 }
 
 @media only screen and (max-width:1440px) {
