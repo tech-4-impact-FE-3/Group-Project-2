@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const LoginButton2 = () => {
     return (
         <>
-            <button type="submit" className="btn-lighter btn btn-primary">Login</button>
+            <Link to={"/dashboard"}><button type="button" className="btn-lighter btn btn-primary">Login</button></Link>
         </>
     )
 }
