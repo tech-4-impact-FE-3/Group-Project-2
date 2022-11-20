@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Gambar from "../components/Gambar";
 import LoginButton2 from "../components/LoginButton2";
 import ReturnButton from "../components/ReturnButton";
@@ -40,7 +41,10 @@ const Login = () => {
                         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
                         <label htmlFor="password">Password</label>
                         <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        <a>Don't have an account? <Link to={"/register"}>Create account</Link></a>
+                        <div className="align-self-center">
                         <LoginButton2 />
+                        </div>
                     </form>
                 </div>
             </div>

@@ -254,6 +254,10 @@
     margin-left: 2rem;
 }
 
+.form-login a {
+    margin-top: 1rem;
+}
+
 @media only screen and (max-width:1440px) {
     .index-content,
     .login-content {
@@ -302,7 +306,9 @@
     }
 }
 
+
 /* Dashboard CSS */
+
 .dashboard {
     background-color: #fff1e6;
     background-image: none;
