@@ -41,7 +41,7 @@ const Login = () => {
                         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
                         <label htmlFor="password">Password</label>
                         <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}/>
-                        <a>Don't have an account? <Link to={"/register"}>Create account</Link></a>
+                        <Link to={"/register"}><a>Don't have an account? Create account</a></Link>
                         <div className="align-self-center">
                         <LoginButton2 />
                         </div>
