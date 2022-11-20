@@ -1,41 +1,374 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset  styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+/* Index */
+
+.btn-darker {
+    margin: 1rem 0;
+    color: #F9F5F4;
+    background-color: #072D4B;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 2.5rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-darker:hover {
+    color: #072D4B;
+    background-color: #F9F5F4;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+/* Login & Register */
+
+.btn-lighter {
+    margin: 1rem 0;
+    color: black;
+    background-color: #E9CCB1;
+    border: 2px solid #072D4B;
+    border-radius: 0.25rem;
+    padding: 0.25rem 7.5rem;
 }
 
-.card {
-  padding: 2em;
+.btn-lighter:hover {
+    color: white;
+    background-color: #072D4B;
+    border: 2px solid #072D4B;
 }
 
-.read-the-docs {
-  color: #888;
+
+/* Navbar CSS */
+
+.navbar {
+    background-color: #E9CCB1;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    display: flex;
+}
+
+.navbar-brand {
+    margin-right: 1rem;
+}
+
+.navbar-brand img {
+    width: 1.5rem;
+    margin-right: 0.25rem;
+}
+
+.navbar a {
+    color: #072D4B;
+    text-decoration: none;
+}
+
+.navbar a span {
+    color: #D7715C;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+.form-control {
+    width: 20rem;
+    padding: 0.5rem 0.5rem;
+    background-color: #F9F5F4;
+    border: 1px solid #F9F5F4;
+    border-radius: 2px;
+    font-size: 0.75rem;
+}
+
+.form-control:focus {
+    outline: 0;
+}
+
+.profile img {
+    width: 1.5rem;
+    margin-right: 0.25rem;
+}
+
+.profile a {
+    color: #072D4B;
+    text-decoration: none;
+    padding: 0px;
+}
+
+.profile a:hover {
+    color: white;
+}
+
+
+/* Category  CSS*/
+
+.category {
+    width: 15%;
+    margin-top: 4rem;
+    margin-left: 4rem;
+}
+
+.category ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem 1.5rem;
+    background-color: #F9F5F4;
+}
+
+.category li {
+    margin: 1rem 0;
+    border-bottom: 1px solid #e4dcda;
+}
+
+.category a {
+    color: #072D4B;
+    text-decoration: none;
+}
+
+.category a:hover {
+    color: #D7715C;
+}
+
+
+/* Buat Forum Card */
+
+.img-buat {
+    width: 15rem;
+}
+
+.buat-forum {
+    margin-top: 4rem;
+    margin-right: 4rem;
+}
+
+.buat-btn {
+    color: #072D4B;
+    background-color: #E9CCB1;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 2.5rem;
+}
+
+.buat-btn:hover {
+    color: #E9CCB1;
+    background-color: #072D4B;
+}
+
+
+/* Dahsboard */
+
+.btn-transparent {
+    color: #072D4B;
+    background-color: transparent;
+    border: 1px solid #e4dcda;
+}
+
+.btn-transparent:hover {
+    color: #e4dcda;
+    background-color: #072D4B;
+    border: 1px solid #072D4B;
+}
+
+
+/* Index */
+
+.page-img img {
+    width: 100%;
+}
+
+.index-text h1,
+.index-text p {
+    color: #072D4B;
+}
+
+.index-text h1 {
+    font-size: 3em;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.index-text p {
+    width: 50%;
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+.index-text span.pink {
+    color: #D7715C;
+}
+
+.bg-image {
+    height: 100vh;
+    background-image: url(./img/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 100vh;
+}
+
+
+/* Register */
+
+.register-text {
+    display: grid;
+    margin-top: 40px;
+    margin-left: 150px;
+}
+
+.register-text input {
+    border-radius: 10px;
+    padding: 5px;
+    padding-right: 110px;
+}
+
+.register-text button {
+    width: 320px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #E9CCB1;
+    margin-bottom: 30px;
+}
+
+.register-cancel a {
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+/* Login */
+
+.content-text {
+    margin-right: 25%;
+}
+
+.form-login,
+.form-register {
+    width: 120%;
+}
+
+.return-btn {
+    margin-left: 2rem;
+}
+
+.form-login a {
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #072D4B;
+}
+
+.form-login a:hover {
+    color: #F9F5F4;
+}
+
+@media only screen and (max-width:1345px) {
+    .index-content,
+    .login-register-content {
+        flex-direction: column;
+    }
+    .bg-image {
+        height: auto;
+    }
+    .page-img img {
+        width: 75%;
+    }
+    .page-img h1 {
+        margin-top: 3rem;
+    }
+    .index-text h1,
+    .login-text h1 {
+        margin: 2rem 0 0.5rem 0;
+        font-size: 2em;
+    }
+    .index-text p {
+        width: 75%;
+        margin: 0.5rem 0;
+        font-size: 0.75rem;
+    }
+    .content-text {
+        margin-right: 0;
+    }
+    .btn-darker {
+        margin: 1rem 0 2rem 0;
+        font-size: 0.75rem;
+        padding: 0.25rem 1.5rem;
+    }
+    .btn-lighter {
+        margin: 1rem 0 3rem 0;
+        font-size: 0.75rem;
+        padding: 0.25rem 1.5rem;
+    }
+    .return-btn .btn-darker {
+        margin-left: 0;
+        color: #072D4B;
+        background-color: transparent;
+    }
+    .return-btn .btn-darker:hover {
+        color: #F9F5F4;
+        background-color: transparent;
+    }
+}
+
+
+/* Dashboard CSS */
+
+.dashboard {
+    background-color: #fff1e6;
+    background-image: none;
+}
+
+.forum {
+    margin: 1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: #fff;
+    position: relative;
+    overflow: hidden;
+    background-color: #F9F5F4;
+}
+
+.container-forum {
+    margin-bottom: 4rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.container-forum h2 {
+    margin: 2rem 1rem 0 2rem;
+    font-size: 1.5rem;
+    color: #072D4B;
+}
+
+.forum img {
+    width: 100%;
+}
+
+.forum-info a {
+    text-decoration: none;
+}
+
+.forum-info h3 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    color: #072D4B;
+    letter-spacing: 0.5px;
+}
+
+.forum-info h3:hover {
+    color: #D7715C;
+}
+
+.overview {
+    margin-top: 1rem;
 }
