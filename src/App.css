@@ -315,14 +315,38 @@
         color: #F9F5F4;
         background-color: transparent;
     }
+    .form-group label {
+        font-size: 0.75rem;
+    }
+    .upload-forum .container {
+        margin-left: 1rem;
+    }
 }
 
 
 /* Dashboard CSS */
 
-.dashboard {
+.dashboard,
+.upload-forum {
     background-color: #fff1e6;
     background-image: none;
+}
+
+.upload-forum {
+    height: 100vh;
+}
+
+.upload-forum h1 {
+    color: #072D4B;
+    margin-top: 7rem;
+}
+
+.form-group label {
+    margin: 1rem 0;
+}
+
+.form-group .form-control {
+    width: 85%;
 }
 
 .forum {
