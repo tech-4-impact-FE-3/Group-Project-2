@@ -5,7 +5,7 @@ import LoginButton1 from "../components/LoginButton1";
 const Index = () => {
     return (
         <>
-        <div className="index-content d-flex justify-content-between align-items-center bg-image">
+        <div className="index-content d-flex align-items-center bg-image">
             <div className="page-img">
                 <GambarIndex />
             </div>

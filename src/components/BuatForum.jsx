@@ -6,7 +6,7 @@ const BuatForum = () => {
     return (
         <>
             <div className="buat-forum card bg-transparent text-center border-0">
-                <img src={buat} alt="image-buat" className="card-img-top img-buat" />
+                <img src={buat} alt="image-buat" className="card-img-top img-buat mx-auto d-block" />
                 <div className="card-body">
                 <Link to={"/upload"}><button type="button" className="buat-btn btn btn-primary">Buat Forum Baru</button></Link>
                 </div>

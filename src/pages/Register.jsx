@@ -10,17 +10,19 @@ const Register = () => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [name, setName] = useState("");
     const [register, setRegister] = useState({});
 
     const handleSubmit = (e) => {
         e.preventDefault();
         // alert('Username: ${username}, Password: ${password}');
-        setRegister({username, email, password});
+        setRegister({username, email, password, name});
 
         axios.post("https://6379ea2d7419b414df95e16c.mockapi.io/user", {
             username: username,
             email: email,
-            password: password
+            password: password,
+            name: name
           })
         .then((result) => {
             console.log(result.data);
@@ -32,13 +34,14 @@ const Register = () => {
             setUsername("");
             setEmail("");
             setPassword("");
+            setName("");
     };
 
     console.log(register);
 
     return (
         <>
-        <div className="login-register-content d-flex justify-content-between align-items-center bg-image">
+        <div className="login-register-content d-flex align-items-center bg-image">
             <div className="page-img d-flex flex-column align-items-center">
                 <h1><strong>Register</strong></h1>
                 <Gambar />
@@ -56,6 +59,8 @@ const Register = () => {
                         <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
                         <label htmlFor="password">Password</label>
                         <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        <label htmlFor="name">Your Name</label>
+                        <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
                         <RegisterButton />
                     </form>
                 </div>
