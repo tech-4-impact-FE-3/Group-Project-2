@@ -12,8 +12,9 @@ const Register = () => {
 
     return (
         <>
+        <div className="login-content d-flex justify-content-between align-items-center bg-image">
         <div className="container register-page">
-        <div className="row align-items-center">
+        <div className="d-flex align-items-center">
             <div className="col register-image">
             <h1><strong>Register</strong></h1>
             <Gambar />
@@ -33,6 +34,7 @@ const Register = () => {
                         <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}/>
                         <RegisterButton />
                     </form>
+                </div>
                 </div>
           </div>
     </div>
