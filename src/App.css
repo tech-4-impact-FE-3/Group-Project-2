@@ -252,7 +252,7 @@
 
 .form-login,
 .form-register {
-    width: 120%;
+    width: 100%;
 }
 
 .return-btn {
@@ -269,7 +269,7 @@
     color: #F9F5F4;
 }
 
-@media only screen and (max-width:1345px) {
+@media only screen and (max-width:960px) {
     .index-content,
     .login-register-content {
         flex-direction: column;
