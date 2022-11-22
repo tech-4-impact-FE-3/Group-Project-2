@@ -49,7 +49,7 @@
 /* Navbar CSS */
 
 .navbar {
-    background-color: #E9CCB1;
+    background-color: #E9CCB1 !important;
     margin-bottom: 1rem;
     padding: 1rem;
     display: flex;
@@ -57,6 +57,8 @@
 
 .navbar-brand {
     margin-right: 1rem;
+    font-size: large;
+    font-weight: 600;
 }
 
 .navbar-brand img {
@@ -65,8 +67,10 @@
 }
 
 .navbar a {
-    color: #072D4B;
+    color: #072D4B !important;
     text-decoration: none;
+    font-size: medium;
+    font-weight: 600;
 }
 
 .navbar a span {
@@ -90,18 +94,22 @@
     outline: 0;
 }
 
-.profile img {
+.navbar-nav {
+    display: flex;
+}
+
+.navbar-nav img {
     width: 1.5rem;
     margin-right: 0.25rem;
 }
 
-.profile a {
+.navbar-nav a {
     color: #072D4B;
     text-decoration: none;
     padding: 0px;
 }
 
-.profile a:hover {
+.navbar-nav a:hover {
     color: white;
 }
 
@@ -360,7 +368,7 @@
     background-color: #F9F5F4;
 }
 
-.container-forum {
+.containerForum {
     margin-bottom: 4rem;
     width: 50%;
     display: flex;
@@ -368,7 +376,7 @@
     margin-top: 2rem;
 }
 
-.container-forum h2 {
+.containerForum h2 {
     margin: 2rem 1rem 0 2rem;
     font-size: 1.5rem;
     color: #072D4B;
