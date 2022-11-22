@@ -3,7 +3,8 @@ import { useState } from "react";
 import axios from "axios";
 import Gambar from "../components/Gambar";
 import RegisterButton from "../components/RegisterButton";
-import ReturnButton from "../components/ReturnButton";
+import { Link } from "react-router-dom";
+// import ReturnButton from "../components/ReturnButton";
 
 const Register = () => {
     const [username, setUsername] = useState("");
@@ -42,7 +43,7 @@ const Register = () => {
                 <h1><strong>Register</strong></h1>
                 <Gambar />
                 <div className="return-btn align-self-start">
-                    <ReturnButton />
+                <Link to={"/login"}><button type="button" className="btn-darker btn btn-primary">Cancel</button></Link>
                 </div>
             </div>
         <div className="content-text d-flex flex-column align-items-center">

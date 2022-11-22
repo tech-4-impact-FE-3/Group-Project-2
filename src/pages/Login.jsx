@@ -23,7 +23,6 @@ const Login = () => {
             username,
             password
         }
-
         console.log(data)
     }
 
@@ -45,7 +44,7 @@ const Login = () => {
                         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
                         <label htmlFor="password">Password</label>
                         <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}/>
-                        <Link to={"/register"}><p>Don't have an account? Create account</p></Link>
+                        <p>Don't have an account? <Link to={"/register"}>Create account</Link></p>
                         <div className="align-self-center">
                         {/* <LoginButton2 /> */}
                         <Link to={"/dashboard"}><button type="submit" className="btn-lighter btn btn-primary" onClick={handleSubmit}>Login</button></Link>
