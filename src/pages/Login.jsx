@@ -1,27 +1,31 @@
-import React from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getUser } from "../redux/action/listUserAction";
 import { Link } from "react-router-dom";
 import Gambar from "../components/Gambar";
-import LoginButton2 from "../components/LoginButton2";
+// import LoginButton2 from "../components/LoginButton2";
 import ReturnButton from "../components/ReturnButton";
 
 const Login = () => {
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [data, setData] = useState({});
+    const state = useSelector(state => state.listUser)
+    const dispatch = useDispatch()
+    console.log(state)
 
-    // console.log(username, password);
+    useEffect(() => {
+        dispatch(getUser())
+    }, [])
+    
+    const handleSubmit = () => {
+        const data = {
+            username,
+            password
+        }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // alert('Username: ${username}, Password: ${password}');
-        setData({username, password});
-        setUsername("");
-        setPassword("");
-    };
-
-    console.log(data);
+        console.log(data)
+    }
 
     return (
         <>
@@ -41,9 +45,10 @@ const Login = () => {
                         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
                         <label htmlFor="password">Password</label>
                         <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}/>
-                        <Link to={"/register"}><a>Don't have an account? Create account</a></Link>
+                        <Link to={"/register"}><p>Don't have an account? Create account</p></Link>
                         <div className="align-self-center">
-                        <LoginButton2 />
+                        {/* <LoginButton2 /> */}
+                        <Link to={"/dashboard"}><button type="submit" className="btn-lighter btn btn-primary" onClick={handleSubmit}>Login</button></Link>
                         </div>
                     </form>
                 </div>
