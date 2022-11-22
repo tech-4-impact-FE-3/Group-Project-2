@@ -8,9 +8,9 @@ const Dashboard = () => {
     return (
         <div className="dashboard">
             <Navbar /> 
-            <div className="d-flex justify-content-between">
+            <div className="dashboard-content d-flex justify-content-between">
                 <BarKategori />  
-            <div className = "ContainerForum">
+            <div className = "containerforum d-flex flex-column">
                 <ContainerForum />
             </div>
                 <BuatForum />

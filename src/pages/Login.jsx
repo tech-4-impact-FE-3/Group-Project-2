@@ -28,7 +28,7 @@ const Login = () => {
 
     return (
         <>
-        <div className="login-register-content d-flex justify-content-between align-items-center bg-image">
+        <div className="login-register-content d-flex align-items-center bg-image">
             <div className="page-img d-flex flex-column align-items-center">
                 <h1><strong>Login</strong></h1>
                 <Gambar />
