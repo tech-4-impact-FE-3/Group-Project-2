@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../redux/action/listUserAction";
-import { Link } from "react-router-dom";
+import { Link, useNavigate  } from "react-router-dom";
 import Gambar from "../components/Gambar";
 // import LoginButton2 from "../components/LoginButton2";
 import ReturnButton from "../components/ReturnButton";
+import axios from "axios";
 
 const Login = () => {
     
@@ -12,19 +13,37 @@ const Login = () => {
     const [password, setPassword] = useState("");
     const state = useSelector(state => state.listUser)
     const dispatch = useDispatch()
+    const navigation = useNavigate();
     console.log(state)
 
     useEffect(() => {
         dispatch(getUser())
     }, [])
     
-    const handleSubmit = () => {
-        const data = {
-            username,
-            password
-        }
-        console.log(data)
-    }
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      console.log({ username, password });
+      axios.get("https://6379ea2d7419b414df95e16c.mockapi.io/user", {
+        username: username,
+        password: password,
+      })
+        .then((result) => {
+          if(username == "" && password == ""){
+            alert("Masukkan Username dan Password anda");
+          }
+          result.data.forEach((element) => {
+            if (element.username === username && element.password === password) {
+              console.log("succes");
+              navigation(`/dashboard`);
+              localStorage.setItem("account", username);
+              localStorage.setItem("pass", password);
+            }
+          });
+        })
+        .catch((error) => {
+          alert(error, "Error");
+        });
+    };  
 
     return (
         <>
