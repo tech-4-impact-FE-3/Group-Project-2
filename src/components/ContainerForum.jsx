@@ -1,9 +1,10 @@
 import React from 'react'
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import axios from 'axios';
 
 function ContainerForum() {
-
+    const navigation = useNavigate();
     const [forum, setForum] = useState([])
 
     useEffect(() => {
@@ -15,13 +16,17 @@ function ContainerForum() {
 
     console.log(forum)
 
+    const handleDetail = (id) => {
+        navigation(`/detail/${id}`);
+    }
+
     return (
         <>
 
         {forum.map((item, index) => (
             <div key={index} className="forum">
             <div className="forum-info">
-                <a href="#">
+                <a onClick={()=> handleDetail(item.id)}>
                     <h3>{item.title}</h3>
                 </a>
             </div>
