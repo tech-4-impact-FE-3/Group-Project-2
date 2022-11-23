@@ -36,7 +36,7 @@ const UploadForum = () => {
     return (
         <div className="upload-forum">
         <Navbar />
-        <div className="container">
+        <div className="container-upload">
         <h1>Upload Forum</h1>
         <br />
             <form action="" onSubmit={handleSubmit}>
