@@ -319,7 +319,7 @@
         margin-right: 0;
     }
     .btn-darker {
-        margin: 1rem 0 2rem 0;
+        margin: 1rem 0 0 0;
         font-size: 0.75rem;
         padding: 0.25rem 1.5rem;
     }
@@ -340,9 +340,6 @@
     .form-group label {
         font-size: 0.75rem;
     }
-    .upload-forum .container {
-        margin-left: 1rem;
-    }
     .dashboard-content {
         flex-direction: column-reverse;
         align-items: center;
@@ -360,6 +357,10 @@
     .buat-forum {
         width: 50%;
         margin-bottom: 2rem;
+    }
+    body .upload-forum .container-upload {
+        margin-top: 3rem;
+        margin-left: 1rem;
     }
 }
 
@@ -400,13 +401,16 @@
 .upload-forum {
     background-color: #fff1e6;
     max-width: 100vw;
-    padding: 0;
-    margin: 0;
 }
 
-.upload-forum h1 {
+.upload-forum {
+    height: 100vh;
     color: #072D4B;
-    margin-top: 7rem;
+}
+
+.upload-forum .container-upload {
+    margin-top: 5rem;
+    margin-left: 4rem;
 }
 
 .form-group label {
