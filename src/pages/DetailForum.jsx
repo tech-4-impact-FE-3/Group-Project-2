@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import axios from 'axios';
+import Comment from '../components/Comment';
 
 const DetailForum = () => {
 
@@ -40,6 +41,7 @@ const DetailForum = () => {
                                     {el.desc}
                                 </div>
                             </div>
+                            <Comment />
                         </div>
                         <BuatForum />
                     </div>
