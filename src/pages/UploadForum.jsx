@@ -7,6 +7,7 @@ const UploadForum = () => {
 
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
+    const [kategori, setKategori] = useState("");
     const [uploadforum, setUploadForum] = useState({});
 
     // console.log(username, password);
@@ -14,11 +15,12 @@ const UploadForum = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // alert('Username: ${username}, Password: ${password}');
-        setUploadForum({title, desc});
+        setUploadForum({title, desc, kategori});
 
         axios.post("https://6379ea2d7419b414df95e16c.mockapi.io/forum", {
             title: title,
-            desc: desc
+            desc: desc,
+            kategori: kategori
           })
       .then((result) => {
           console.log(result.data);
@@ -29,6 +31,7 @@ const UploadForum = () => {
       })
         setTitle("");
         setDesc("");
+        setKategori("");
     };
 
     console.log(uploadforum);
@@ -47,6 +50,14 @@ const UploadForum = () => {
                 <div className="form-group">
                 <label htmlFor="desc">Add your forum description here!</label>
                 <textarea className="form-control" id="desc" rows="7" value={desc} onChange={(e) => setDesc(e.target.value)} />
+                </div>
+                <div className="form-group">
+                <select className="selectform" value={kategori} onChange={(e) => setKategori(e.target.value)}>
+                    <option value="">Select Category</option>
+                    <option value="politics">Politics</option>
+                    <option value="health">Health</option>
+                    <option value="education">Education</option>
+                </select>
                 </div>
                 <button type="submit" className="btn-darker btn btn-primary mt-4">Upload</button>
             </form>
