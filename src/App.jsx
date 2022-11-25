@@ -6,6 +6,7 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import UploadForum from './pages/UploadForum';
 import DetailForum from './pages/DetailForum';
+import CategoryPage from './pages/CategoryPage';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/detail/:id" element={<DetailForum />} />
         <Route path="/upload" element={<UploadForum />} />
+        <Route path="/category/:kategori" element={<CategoryPage />} />
       </Routes>
     </div>
   )
