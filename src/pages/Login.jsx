@@ -9,7 +9,7 @@ import axios from "axios";
 
 const Login = () => {
     
-    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const state = useSelector(state => state.listUser)
     const dispatch = useDispatch()
@@ -22,20 +22,20 @@ const Login = () => {
     
     const handleSubmit = (e) => {
       e.preventDefault();
-      console.log({ username, password });
+      console.log({ email, password });
       axios.get("https://6379ea2d7419b414df95e16c.mockapi.io/user", {
-        username: username,
+        email: email,
         password: password,
       })
         .then((result) => {
-          if(username == "" && password == ""){
-            alert("Masukkan Username dan Password anda");
+          if(email == "" && password == ""){
+            alert("Masukkan Email dan Password anda");
           }
           result.data.forEach((element) => {
-            if (element.username === username && element.password === password) {
+            if (element.email === email && element.password === password) {
               console.log("succes");
               navigation(`/dashboard`);
-              localStorage.setItem("account", username);
+              localStorage.setItem("account", email);
               localStorage.setItem("pass", password);
             }
           });
@@ -59,8 +59,8 @@ const Login = () => {
                 <h1>Login</h1>
                 <div className="form-login">
                     <form action="" onSubmit={handleSubmit} className="d-flex flex-column">
-                        <label htmlFor="username">Username</label>
-                        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                        <label htmlFor="email">Email</label>
+                        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
                         <label htmlFor="password">Password</label>
                         <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}/>
                         <p>Don't have an account? <Link to={"/register"}>Create account</Link></p>
