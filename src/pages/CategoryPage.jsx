@@ -5,13 +5,15 @@ import Navbar from '../components/Navbar';
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import axios from 'axios';
-import Comment from '../components/Comment';
+import { useNavigate } from "react-router-dom"
 
-const DetailForum = () => {
 
+const CategoryPage = () => {
+    
+    const navigation = useNavigate();
     const [forum, setForum] = useState([])
-    const { id } = useParams();
-    //console.log(id)
+    const { kategori } = useParams();
+    //console.log(kategori)
 
     useEffect(() => {
         axios("https://6379ea2d7419b414df95e16c.mockapi.io/forum").then (result => {
@@ -20,37 +22,39 @@ const DetailForum = () => {
         })
     }, [])
 
+    const handleDetail = (id) => {
+        navigation(`/detail/${id}`);
+    }
+
     //console.log(forum)
 
-
-
     return (
-        <>{forum.filter((el) => el.id === id).map((el) => {
-            return (
-                <div key={el.id}>
-                <div className="detail">
+        <>
+        <div className="dashboard">
                     <Navbar /> 
-                    <div className="detail-content d-flex justify-content-between">
+                    <div className="dashboard-content d-flex justify-content-between">
                         <BarKategori />
-                        <div className="containerdetail d-flex flex-column">
+                        <div className="containerforum d-flex flex-column">
+                        {forum.filter((el) => el.kategori === kategori).map((el, index) => {
+                        return (
+                            <div key={index}>
                             <div className="forum">
                                 <div className="forum-info">
-                                    <h3>{el.title}</h3>
+                                    <h3 onClick={()=> handleDetail(el.id)}>{el.title}</h3>
                                 </div>
                                 <div className="overview">
                                     {el.desc}
                                 </div>
                             </div>
-                            <Comment />
+                            </div>
+                            )
+                        })}
                         </div>
-                        <BuatForum />
-                    </div>
+                    <BuatForum />
                 </div>
-                </div>
-            )
-        })}
-    </>
+        </div>
+        </>
     )
 }
 
-export default DetailForum;
+export default CategoryPage;

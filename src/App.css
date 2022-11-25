@@ -354,8 +354,17 @@
         width: 100%;
     }
     .containerforum .forum,
-    .containerdetail .forum {
+    .containerdetail .forum,
+    .containerdetail .main-container {
         margin: 0 0 2rem 0;
+    }
+    .input-comment {
+        max-width: 75vw;
+    }
+    body .comment-btn {
+        height: 30px;
+        width: 60px;
+        font-size: 0.75rem;
     }
     .buat-forum {
         width: 50%;
@@ -364,6 +373,9 @@
     body .upload-forum .container-upload {
         margin-top: 3rem;
         margin-left: 1rem;
+    }
+    .selectform {
+        font-size: 0.75rem;
     }
 }
 
@@ -426,10 +438,14 @@
     width: 85%;
 }
 
+.selectform {
+    margin-top: 1rem;
+}
+
 .forum {
     margin: 0 1rem;
     padding: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border-radius: 10px;
     box-shadow: #fff;
     position: relative;
@@ -438,24 +454,13 @@
 }
 
 .containerforum {
-    max-width: 100%;
+    width: 100%;
     margin-bottom: 1rem;
 }
 
 .containerdetail {
     width: 100%;
     margin-bottom: 1rem;
-}
-
-.forum-detail {
-    margin: 0 1rem;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    border-radius: 10px;
-    box-shadow: #fff;
-    position: relative;
-    overflow: hidden;
-    background-color: #F9F5F4;
 }
 
 .forum-info a {
@@ -477,13 +482,16 @@
     margin-top: 1rem;
 }
 
+
 /* Comment CSS */
+
 .main-container {
     margin: 0 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
+    color: #072D4B;
 }
 
 .comment-flexbox {
@@ -502,13 +510,14 @@
     height: 75px;
     width: 550px;
     background-color: #fff;
+    border: none;
 }
 
 .comment-btn {
     height: 40px;
     width: 80px;
-    background-color: #1b0fff;
-    color: white;
+    background-color: #E9CCB1;
+    color: #072D4B;
     font-size: 1rem;
     margin-top: 10px;
     border-radius: 5px;
