@@ -60,9 +60,9 @@ const Login = () => {
                 <div className="form-login">
                     <form action="" onSubmit={handleSubmit} className="d-flex flex-column">
                         <label htmlFor="email">Email</label>
-                        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                         <label htmlFor="password">Password</label>
-                        <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                         <p>Don't have an account? <Link to={"/register"}>Create account</Link></p>
                         <div className="align-self-center">
                         {/* <LoginButton2 /> */}
