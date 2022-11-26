@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 // import ReturnButton from "../components/ReturnButton";
 
 const Register = () => {
-    const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
@@ -16,10 +15,9 @@ const Register = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // alert('Username: ${username}, Password: ${password}');
-        setRegister({username, email, password, name});
+        setRegister({ email, password, name});
 
         axios.post("https://6379ea2d7419b414df95e16c.mockapi.io/user", {
-            username: username,
             email: email,
             password: password,
             name: name
@@ -31,7 +29,6 @@ const Register = () => {
             console.log(error);
             alert("error");
         })
-            setUsername("");
             setEmail("");
             setPassword("");
             setName("");
@@ -53,12 +50,10 @@ const Register = () => {
             <h1>Register</h1>
             <div className="form-register">
                     <form action="" onSubmit={handleSubmit} className="d-flex flex-column">
-                        <label htmlFor="username">Username</label>
-                        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
                         <label htmlFor="email">Email</label>
-                        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                         <label htmlFor="password">Password</label>
-                        <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                         <label htmlFor="name">Your Name</label>
                         <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
                         <RegisterButton />
