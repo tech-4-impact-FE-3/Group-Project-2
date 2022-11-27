@@ -10,7 +10,7 @@ const Dashboard = () => {
             <Navbar /> 
             <div className="dashboard-content d-flex justify-content-between">
                 <BarKategori />  
-            <div className = "containerforum d-flex flex-column">
+            <div className = "containerforum d-flex flex-column-reverse">
                 <ContainerForum />
             </div>
                 <BuatForum />

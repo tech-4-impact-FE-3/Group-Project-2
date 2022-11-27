@@ -25,7 +25,6 @@ const CategoryPage = () => {
     const handleDetail = (id) => {
         navigation(`/detail/${id}`);
     }
-
     //console.log(forum)
 
     return (

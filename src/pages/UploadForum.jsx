@@ -57,6 +57,7 @@ const UploadForum = () => {
                     <option value="politics">Politics</option>
                     <option value="health">Health</option>
                     <option value="education">Education</option>
+                    <option value="others">Others</option>
                 </select>
                 </div>
                 <button type="submit" className="btn-darker btn btn-primary mt-4">Upload</button>
