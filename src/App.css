@@ -134,12 +134,13 @@
     border-bottom: 1px solid #e4dcda;
 }
 
-.category a {
+.category-text {
     color: #072D4B;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.category a:hover {
+.category-text:hover {
     color: #D7715C;
 }
 
@@ -472,6 +473,7 @@
     margin-top: 1.5rem;
     color: #072D4B;
     letter-spacing: 0.5px;
+    cursor: pointer;
 }
 
 .forum-info h3:hover {

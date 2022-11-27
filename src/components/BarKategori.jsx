@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import axios from 'axios';
 
 const BarKategori = () => {
@@ -27,11 +27,11 @@ const BarKategori = () => {
         <>
         <div className="category">
             <ul>
-                <li><a href="#">Trending</a></li>
-                <li><a onClick={() => handleCategory('politics')}>Politics</a></li>
-                <li><a onClick={() => handleCategory('health')}>Health</a></li>
-                <li><a onClick={() => handleCategory('education')}>Education</a></li>
-                <li><a href="#">Others</a></li>
+                <li><Link to={"/dashboard"} className="category-text">Newest</Link></li>
+                <li><a className="category-text" onClick={() => handleCategory('politics')}>Politics</a></li>
+                <li><a className="category-text" onClick={() => handleCategory('health')}>Health</a></li>
+                <li><a className="category-text" onClick={() => handleCategory('education')}>Education</a></li>
+                <li><a className="category-text" onClick={() => handleCategory('others')}>Others</a></li>
             </ul>
         </div>
         </>
