@@ -8,10 +8,10 @@ const Navbar = () => {
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
-                <Link to={"/dashboard"}><a className="navbar-brand" href="#">
+                <Link to={"/dashboard"} className="navbar-brand" href="#">
                     <img src={logo} alt="logo" width="30" height="24" className="d-inline-block align-text-top" />
                         Explore<span>ASEAN</span>
-                    </a></Link>
+                    </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
